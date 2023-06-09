@@ -1,12 +1,14 @@
 package test_scenarios;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import Objects.googlesearch_page;
-import Objects.faceooksearch_page;
+import object.googlesearch_page;
+import object.facebooksearch_page;
 
 public class test_methods_googlesearch {
 	
@@ -20,7 +22,7 @@ public class test_methods_googlesearch {
 		// WebDriverManager.chmedriver().setup();
 	 driver = new ChromeDriver();
 		
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get("https://www.google.com/");
 		driver.manage().window().maximize();
 	}
